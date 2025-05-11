@@ -1,0 +1,6 @@
+@labor_fee_calculator_HostAddress = http://localhost:5245
+
+GET {{labor_fee_calculator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,3 +1,6 @@
+using labor_fee_calculator.Service;
+using labor_fee_calculator.Service.Interface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +20,8 @@ builder.Services.AddCors(options =>
                   .AllowAnyHeader();
         });
 });
+
+builder.Services.AddTransient<ILaborFeeService, LaborFeeService>();
 
 var app = builder.Build();
 
